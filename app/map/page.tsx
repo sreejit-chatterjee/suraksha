@@ -2,14 +2,15 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
-import { MapView } from "@/components/map-view"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Search, MapPin } from "lucide-react"
 import { Input } from "@/components/ui/input"
+import { MapPin, Search } from "lucide-react"
+import { MapLoader } from "@/components/map-loader"
+import { MapView } from "@/components/map-view"
 
 // Default location (Navi Mumbai coordinates)
-const DEFAULT_LOCATION = { lat: 19.033, lng: 73.0297 }
+const DEFAULT_LOCATION = { lat: 19.033, lng: 73.0297 };
 
 export default function MapPage() {
   const [location, setLocation] = useState(DEFAULT_LOCATION)
@@ -85,7 +86,9 @@ export default function MapPage() {
       </div>
 
       <div className="glass-card" style={{ height: "70vh" }}>
-        <MapView location={location} onCardStateChange={setIsCardOpen} />
+        <MapLoader>
+          <MapView location={location} onCardStateChange={setIsCardOpen} />
+        </MapLoader>
       </div>
 
       <div className="mt-4 text-sm text-center text-muted-foreground">
