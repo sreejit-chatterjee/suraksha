@@ -1,0 +1,22 @@
+{
+  "contacts": [
+    {
+      "id": "contact-1",
+      "user_id": "user-123",
+      "name": "Mom",
+      "phone": "+91 98765 43210",
+      "email": "sreejitc2019@gmail.com",
+      "relation": "Family",
+      "created_at": "2023-01-01T00:00:00Z"
+    },
+    {
+      "id": "contact-2",
+      "user_id": "user-123",
+      "name": "Sister",
+      "phone": "+91 87654 32109",
+      "email": "sreejitc2019@gmail.com",
+      "relation": "Family",
+      "created_at": "2023-01-01T00:00:00Z"
+    }
+  ]
+}

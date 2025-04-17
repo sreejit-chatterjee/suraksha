@@ -1,0 +1,12 @@
+{
+  "locations": [
+    {
+      "id": "loc-1",
+      "user_id": "user-123",
+      "lat": 19.033,
+      "lng": 73.0297,
+      "safety_score": 7,
+      "created_at": "2023-01-01T12:00:00Z"
+    }
+  ]
+}

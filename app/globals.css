@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 346 100% 92%;
+    --primary-foreground: 346 100% 30%;
+    --secondary: 260 100% 92%;
+    --secondary-foreground: 260 100% 30%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 174 100% 92%;
+    --accent-foreground: 174 100% 30%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 346 100% 92%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    /* Softer dark mode colors with pink accents */
+    --background: 230 25% 18%;
+    --foreground: 210 40% 98%;
+    --card: 230 25% 20%;
+    --card-foreground: 210 40% 98%;
+    --popover: 230 25% 18%;
+    --popover-foreground: 210 40% 98%;
+    /* Pink primary color */
+    --primary: 340 80% 70%;
+    --primary-foreground: 340 100% 97%;
+    --secondary: 260 50% 70%;
+    --secondary-foreground: 260 100% 97%;
+    --muted: 230 25% 25%;
+    --muted-foreground: 215 20.2% 75.1%;
+    /* Pink accent color */
+    --accent: 340 60% 65%;
+    --accent-foreground: 340 100% 97%;
+    --destructive: 0 70% 65%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 230 25% 25%;
+    --input: 230 25% 25%;
+    /* Pink ring color */
+    --ring: 340 80% 70%;
+    /* New purple safe color */
+    --safe: 270 60% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.glass-card {
+  @apply bg-white bg-opacity-20 backdrop-blur-lg rounded-2xl border border-white border-opacity-20 shadow-lg dark:bg-black dark:bg-opacity-10 dark:border-gray-700 dark:border-opacity-20;
+}
+
+.glass-button {
+  @apply bg-white bg-opacity-30 backdrop-blur-md rounded-full border border-white border-opacity-30 shadow-md transition-all hover:bg-opacity-40 dark:bg-black dark:bg-opacity-20 dark:border-gray-700 dark:border-opacity-30;
+}
+
+.glass-input {
+  @apply bg-white bg-opacity-20 backdrop-blur-md rounded-xl border border-white border-opacity-30 shadow-sm dark:bg-black dark:bg-opacity-10 dark:border-gray-700 dark:border-opacity-30;
+}
+
+.safety-gradient-bg {
+  background: linear-gradient(to bottom right, #ffd1dc, #e6e6fa, #afeeee);
+}
+
+.dark .safety-gradient-bg {
+  /* Softer gradient with pink accent */
+  background: linear-gradient(to bottom right, #432d3d, #1a365d, #234e52);
+}
+
+/* Add pink accents to specific elements in dark mode */
+.dark .text-primary-foreground {
+  color: hsl(340, 100%, 90%);
+}
+
+.dark .border-primary {
+  border-color: hsl(340, 80%, 70%);
+}
+
+/* Add subtle pink glow to important elements */
+.dark .safety-feature-highlight {
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.15);
+}
+
+/* Pink tint for glass cards with special emphasis */
+.dark .glass-card-accent {
+  background-color: rgba(255, 182, 193, 0.05);
+  border-color: rgba(255, 182, 193, 0.1);
+}
